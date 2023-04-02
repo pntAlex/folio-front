@@ -1799,7 +1799,10 @@ nav.open {
   }
 
   .classic-menu .flexnav {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
     float: right;
     position: relative;
     width: auto;
@@ -3299,10 +3302,10 @@ nav.open {
   }
 
   .flexnav {
+    display: flex;
+    gap: 20px;
     padding: 0 20px;
     max-height: 2000px;
-    display: table;
-    width: auto;
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
@@ -3938,11 +3941,11 @@ nav.open {
 
 .dot {
   display: inline-block;
-  width: 1.25em;
-  height: 1.25em;
+  width: min(5vw, 1.25em);
+  height: min(5vw, 1.25em);
   z-index: 1;
   border-radius: 50%;
-  background: lightgreen;
+  background: lightgreen !important;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.16);
   animation: dot-grow 2s infinite;
 }
