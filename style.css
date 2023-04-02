@@ -412,11 +412,13 @@ figure.has-parallax {
 
 .full figure.has-parallax {
   overflow: hidden;
-  height: 100vh;
+  height: 50vh;
 }
 
 figure img {
   max-width: 100%;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.34);
 }
 
 .has-parallax-content > img {
@@ -426,6 +428,7 @@ figure img {
   display: block;
   object-position: center;
   object-fit: cover;
+  filter: brightness(0.6);
 }
 
 figcaption {
@@ -1364,7 +1367,7 @@ i.arrow-icon::after {
   padding-left: 5px;
   margin: 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   display: block;
   opacity: 1;

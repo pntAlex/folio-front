@@ -756,64 +756,64 @@ Page Load Actions
     }
 
     if (!$("body").hasClass("disable-ajaxload")) {
-      if ($(".next-ajax-link-project").hasClass("auto-trigger")) {
-        // cleanup every scroll trigger that may be still active in the ajax context
-        if (
-          !(
-            typeof window.ReachBottomArr === "undefined" ||
-            window.ReachBottomArr === null
-          ) &&
-          Array.isArray(window.ReachBottomArr)
-        ) {
-          window.ReachBottomArr.forEach((element) => {
-            element.kill()
-          })
-        }
-        window.ReachBottomArr = new Array()
+      // if ($(".next-ajax-link-project").hasClass("auto-trigger")) {
+      //   // cleanup every scroll trigger that may be still active in the ajax context
+      //   if (
+      //     !(
+      //       typeof window.ReachBottomArr === "undefined" ||
+      //       window.ReachBottomArr === null
+      //     ) &&
+      //     Array.isArray(window.ReachBottomArr)
+      //   ) {
+      //     window.ReachBottomArr.forEach((element) => {
+      //       element.kill()
+      //     })
+      //   }
+      //   window.ReachBottomArr = new Array()
 
-        $("#project-nav").each(function () {
-          var $this = $(this)
-          const ReachBottom = ScrollTrigger.create({
-            id: Math.floor(Math.random() * 100),
-            trigger: $("#project-nav"),
-            start: "top top+=1px",
-            end: (st) =>
-              "+=" + (st.vars.trigger.outerHeight(true) - window.innerHeight),
-            onEnter: function (st) {
-              $("body").addClass("show-loader")
-              $this.delay(500).queue(function () {
-                gsap.set($(".next-hero-progress"), {
-                  backgroundColor: "transparent",
-                })
-                gsap.to($(".next-hero-progress span"), {
-                  duration: 0.3,
-                  width: "0%",
-                  ease: Power2.easeInOut,
-                  onComplete: function () {
-                    gsap.set($(".next-hero-progress"), { opacity: 0 })
-                  },
-                })
-                var link = $this.find("a")
-                link.trigger("click")
-              })
-            },
-            onRefresh: function (st) {},
-            onLeaveBack: function () {
-              $("body").removeClass("show-loader")
-              $this.clearQueue()
-            },
-          })
-          window.ReachBottomArr.push(ReachBottom)
-          $("body").waitForImages({
-            finished: function () {
-              setTimeout(function () {
-                ReachBottom.refresh()
-              }, 200)
-            },
-            waitForAll: true,
-          })
-        })
-      }
+      //   $("#project-nav").each(function () {
+      //     var $this = $(this)
+      //     const ReachBottom = ScrollTrigger.create({
+      //       id: Math.floor(Math.random() * 100),
+      //       trigger: $("#project-nav"),
+      //       start: "top top+=1px",
+      //       end: (st) =>
+      //         "+=" + (st.vars.trigger.outerHeight(true) - window.innerHeight),
+      //       onEnter: function (st) {
+      //         $("body").addClass("show-loader")
+      //         $this.delay(500).queue(function () {
+      //           gsap.set($(".next-hero-progress"), {
+      //             backgroundColor: "transparent",
+      //           })
+      //           gsap.to($(".next-hero-progress span"), {
+      //             duration: 0.3,
+      //             width: "0%",
+      //             ease: Power2.easeInOut,
+      //             onComplete: function () {
+      //               gsap.set($(".next-hero-progress"), { opacity: 0 })
+      //             },
+      //           })
+      //           var link = $this.find("a")
+      //           link.trigger("click")
+      //         })
+      //       },
+      //       onRefresh: function (st) {},
+      //       onLeaveBack: function () {
+      //         $("body").removeClass("show-loader")
+      //         $this.clearQueue()
+      //       },
+      //     })
+      //     window.ReachBottomArr.push(ReachBottom)
+      //     $("body").waitForImages({
+      //       finished: function () {
+      //         setTimeout(function () {
+      //           ReachBottom.refresh()
+      //         }, 200)
+      //       },
+      //       waitForAll: true,
+      //     })
+      //   })
+      // }
 
       if ($("#hero-image-wrapper").hasClass("change-header-color")) {
         $("#hero-footer").addClass("white-header")
