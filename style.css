@@ -1798,6 +1798,11 @@ nav.open {
     background-color: transparent !important;
   }
 
+  .classic-menu .dot {
+    width: 1.25em;
+    height: 1.25em;
+  }
+
   .classic-menu .flexnav {
     display: flex;
     flex-direction: row;
@@ -3941,8 +3946,8 @@ nav.open {
 
 .dot {
   display: inline-block;
-  width: min(5vw, 1.25em);
-  height: min(5vw, 1.25em);
+  width: 0.5ch;
+  height: 0.5ch;
   z-index: 1;
   border-radius: 50%;
   background: lightgreen !important;
