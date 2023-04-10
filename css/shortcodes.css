@@ -1072,8 +1072,8 @@ video.bgvid {
   transform: translateY(60px);
 }
 
-h1.big-title.has-mask span,
-h1.big-title.has-mask span > span {
+.big-title.has-mask span,
+.big-title.has-mask span > span {
   line-height: inherit;
   height: inherit;
   margin-right: 12px;

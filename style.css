@@ -653,14 +653,14 @@ h6 {
   margin-bottom: 10px;
 }
 
-h1.big-title {
+.big-title {
   font-size: 10vw;
   line-height: 13vw;
   font-weight: 500;
   margin-left: -0.7vw;
 }
 
-h1.big-title span {
+.big-title span {
   display: table;
   margin-top: -2vw;
 }
@@ -3126,7 +3126,7 @@ nav.open {
 ---------------------------------------------------*/
 
 @media only screen and (max-width: 1466px) {
-  h1.big-title {
+  .big-title {
     font-size: 11vw;
     line-height: 14vw;
   }
@@ -3183,7 +3183,7 @@ nav.open {
 }
 
 @media only screen and (max-width: 1024px) {
-  h1.big-title {
+  .big-title {
     font-size: 12vw;
     line-height: 16vw;
   }
@@ -3508,7 +3508,7 @@ nav.open {
 }
 
 @media only screen and (max-width: 767px) {
-  h1.big-title {
+  .big-title {
     font-size: 13vw;
     line-height: 17vw;
   }
@@ -3785,7 +3785,7 @@ nav.open {
 }
 
 @media only screen and (max-width: 479px) {
-  h1.big-title {
+  .big-title {
     font-size: 14vw;
     line-height: 18vw;
   }
