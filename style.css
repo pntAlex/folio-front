@@ -1806,7 +1806,6 @@ nav.open {
   .classic-menu .flexnav {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 30px;
     float: right;
     position: relative;
@@ -2795,12 +2794,16 @@ footer .socials-wrap {
   display: table;
 }
 
-.button-wrap:after {
+/* .button-wrap:after {
   clear: both;
   content: " ";
   display: block;
   height: 0;
   visibility: hidden;
+} */
+
+.button-wrap .dot {
+  margin-right: 0.5rem;
 }
 
 .button-wrap.left {
@@ -2811,6 +2814,9 @@ footer .socials-wrap {
 .button-wrap.right {
   float: right;
   right: -26px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 #main .button-wrap.left {
@@ -2833,13 +2839,13 @@ footer .socials-wrap {
 }
 
 .icon-wrap {
-  width: 80px;
-  height: 80px;
+  /* width: 80px;
+  height: 80px; */
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  float: left;
+  /* float: left; */
 }
 
 #main .icon-wrap {
@@ -2907,7 +2913,7 @@ footer .socials-wrap {
   margin: 25px 0;
   overflow: hidden;
   width: auto;
-  padding: 0 10px;
+  padding: 0px;
   color: #000;
   -webkit-transition: color 0.05s ease-in-out;
   transition: color 0.05s ease-in-out;
@@ -2965,9 +2971,9 @@ footer .socials-wrap {
 }
 
 .button-wrap.right .button-text {
-  text-align: right;
+  /* text-align: right;
   float: right;
-  padding-left: 0px;
+  padding-left: 0px; */
 }
 
 .button-text span {
@@ -3946,11 +3952,59 @@ nav.open {
 
 .dot {
   display: inline-block;
-  width: 0.5ch;
-  height: 0.5ch;
+  width: 1.2rem;
+  height: 1.2rem;
   z-index: 1;
   border-radius: 50%;
   background: lightgreen !important;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.16);
   animation: dot-grow 2s infinite;
+}
+
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+}
+.tooltip-toggle::before {
+  --width: 18ch;
+  position: absolute;
+  bottom: -48px;
+  left: calc((var(--width) / 2 + 5px) * -1);
+  background-color: #2b222a;
+  border-radius: 5px;
+  color: #fff;
+  content: attr(aria-label);
+  padding: 0.6rem;
+  text-transform: none;
+  transition: all 0.5s ease;
+  width: var(--width);
+}
+.tooltip-toggle::after {
+  position: absolute;
+  bottom: -12px;
+  left: 9px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #2b222a;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+  margin-left: -5px;
+  width: 0;
+}
+.tooltip-toggle::before,
+.tooltip-toggle::after {
+  color: #efefef;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+}
+.tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after,
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
+  opacity: 1;
+  transition: all 0.75s ease;
 }
