@@ -40,47 +40,47 @@ Function Page Load
     gsap.set($(".menu-timeline .before-span"), { y: 120, opacity: 0 })
 
     // Page Navigation Events
-    $(".preloader-wrap").on("mouseenter", function () {
-      var $this = $(this)
-      gsap.to("#ball", {
-        duration: 0.3,
-        borderWidth: "2px",
-        scale: 1.2,
-        borderColor: $("body").data("primary-color"),
-        backgroundColor: $("body").data("primary-color"),
-      })
-      gsap.to("#ball-loader", {
-        duration: 0.2,
-        borderWidth: "2px",
-        top: 2,
-        left: 2,
-      })
-      $("#ball").append(
-        '<p class="first">' +
-          $this.data("firstline") +
-          "</p>" +
-          "<p>" +
-          $this.data("secondline") +
-          "</p>"
-      )
-    })
+    // $(".preloader-wrap").on("mouseenter", function () {
+    //   var $this = $(this)
+    //   gsap.to("#ball", {
+    //     duration: 0.3,
+    //     borderWidth: "2px",
+    //     scale: 1.2,
+    //     borderColor: $("body").data("primary-color"),
+    //     backgroundColor: $("body").data("primary-color"),
+    //   })
+    //   gsap.to("#ball-loader", {
+    //     duration: 0.2,
+    //     borderWidth: "2px",
+    //     top: 2,
+    //     left: 2,
+    //   })
+    //   $("#ball").append(
+    //     '<p class="first">' +
+    //       $this.data("firstline") +
+    //       "</p>" +
+    //       "<p>" +
+    //       $this.data("secondline") +
+    //       "</p>"
+    //   )
+    // })
 
-    $(".preloader-wrap").on("mouseleave", function () {
-      gsap.to("#ball", {
-        duration: 0.2,
-        borderWidth: "4px",
-        scale: 0.5,
-        borderColor: "#999999",
-        backgroundColor: "transparent",
-      })
-      gsap.to("#ball-loader", {
-        duration: 0.2,
-        borderWidth: "4px",
-        top: 0,
-        left: 0,
-      })
-      $("#ball p").remove()
-    })
+    // $(".preloader-wrap").on("mouseleave", function () {
+    //   gsap.to("#ball", {
+    //     duration: 0.2,
+    //     borderWidth: "4px",
+    //     scale: 0.5,
+    //     borderColor: "#999999",
+    //     backgroundColor: "transparent",
+    //   })
+    //   gsap.to("#ball-loader", {
+    //     duration: 0.2,
+    //     borderWidth: "4px",
+    //     top: 0,
+    //     left: 0,
+    //   })
+    //   $("#ball p").remove()
+    // })
 
     $("body").removeClass("hidden").removeClass("hidden-ball")
 
@@ -495,19 +495,19 @@ Function Page Load
         swapSlide.add(label)
 
         // Move the whole word
-        if (i > 0) {
-          swapSlide.to(
-            swapOpts.slides,
-            {
-              duration: swapOpts.duration,
-              y: i * -1 * swapOpts.lineHeight,
-            },
-            label
-          )
+        // if (i > 0) {
+        swapSlide.to(
+          swapOpts.slides,
+          {
+            duration: swapOpts.duration,
+            y: i * -1 * swapOpts.lineHeight,
+          },
+          label
+        )
 
-          // Add some blank space before the next animation
-          swapSlide.to({}, { duration: 0.15 })
-        }
+        // Add some blank space before the next animation
+        swapSlide.to({}, { duration: 0.3 })
+        // }
       })
       swapSlide.play()
 
@@ -525,11 +525,11 @@ Function Page Load
       )
 
       // Percentage Increment Animation
-      var PercentageID = $("#precent"),
+      var PercentageID = document.getElementById("precent"),
         start = 0,
         end = 100,
-        durataion = time + 0
-      animateValue(PercentageID, start, end, durataion)
+        duration = time + 0
+      animateValue(PercentageID, start, end, duration)
 
       function animateValue(id, start, end, duration) {
         var range = end - start,
