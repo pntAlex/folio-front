@@ -4008,13 +4008,3 @@ nav.open {
   opacity: 1;
   transition: all 0.75s ease;
 }
-
-.simple-link {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  transition: color 0.2s;
-}
-
-.simple-link:hover {
-  color: orange
-}

@@ -117,8 +117,8 @@
 }
 
 .hero-title {
-  font-size: 10vw;
-  line-height: 13vw;
+  font-size: 7vw;
+  line-height: 10vw;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -540,8 +540,8 @@
 }
 
 #page-nav .next-hero-title {
-  font-size: 10vw;
-  line-height: 13vw;
+  font-size: 7vw;
+  line-height: 10.5vw;
 }
 
 .marquee-title .next-hero-title {
@@ -1225,4 +1225,8 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.orange {
+  color: orange;
 }
