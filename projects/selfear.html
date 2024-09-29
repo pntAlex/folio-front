@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Alexandre Pinot | Projets - Selfear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projet - Site web vitrine du peintre UV Selfear, qui présente son
+      univers et l'étendue de ses créations"
+    />
+    <meta name="author" content="Alexandre Pinot" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="../favicon.ico" />
+    <link href="../style.css" rel="stylesheet" />
+    <link href="../css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body class="hidden hidden-ball smooth-scroll" data-primary-color="#171717">
+    <main>
+      <!-- Preloader -->
+      <div
+        class="preloader-wrap"
+        data-firstline="Work in"
+        data-secondline="Progress"
+      >
+        <div class="outer">
+          <div class="inner">
+            <div class="trackbar">
+              <ul class="preloader-intro">
+                <li class="preloader-list">Alexandre</li>
+                <li class="preloader-list">Pinot</li>
+                <li class="preloader-list">Développeur</li>
+                <li class="preloader-list">Full-Stack</li>
+              </ul>
+              <div class="loadbar"></div>
+            </div>
+            <div class="percentage-wrapper">
+              <div class="percentage" id="precent"></div>
+            </div>
+            <div class="percentage-intro">W.I.P</div>
+          </div>
+        </div>
+      </div>
+      <!--/Preloader -->
+
+      <div class="cd-index cd-main-content">
+        <!-- Page Content -->
+        <div id="page-content" class="light-content" data-bgcolor="#171717">
+          <!-- Header -->
+          <header
+            class="fullscreen-menu invert-header"
+            data-menucolor="#171717"
+          >
+            <div id="header-container">
+              <!-- Logo -->
+              <div id="logo" class="hide-ball">
+                <a class="ajax-link" data-type="page-transition" href="/">
+                  <img
+                    class="black-logo"
+                    src="../assets/logo.webp"
+                    alt="Alexandre Pinot Logo"
+                  />
+                  <img
+                    class="white-logo"
+                    src="../assets/logo.webp"
+                    alt="Alexandre Pinot Logo"
+                  />
+                </a>
+              </div>
+              <!--/Logo -->
+
+              <!-- Navigation -->
+              <nav>
+                <div class="nav-height">
+                  <div class="outer">
+                    <div class="inner">
+                      <ul data-breakpoint="10025" class="flexnav">
+                        <li class="link menu-timeline">
+                          <a
+                            class="ajax-link"
+                            data-type="page-transition"
+                            href="/"
+                            ><div class="before-span">
+                              <span data-hover="Accueil">Accueil</span>
+                            </div></a
+                          >
+                        </li>
+                        <li class="link menu-timeline">
+                          <a
+                            class="ajax-link active"
+                            data-type="page-transition"
+                            href="/realisations.html"
+                            ><div class="before-span">
+                              <span data-hover="Réalisations"
+                                >Réalisations</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li class="link menu-timeline">
+                          <a
+                            class="ajax-link"
+                            data-type="page-transition"
+                            href="/about.html"
+                            ><div class="before-span">
+                              <span data-hover="À propos">À propos</span>
+                            </div></a
+                          >
+                        </li>
+                        <li class="link menu-timeline">
+                          <a
+                            class="ajax-link"
+                            data-type="page-transition"
+                            href="/contact.html"
+                            ><div class="before-span">
+                              <span data-hover="Contact">Contact</span>
+                            </div></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <!--/Navigation -->
+
+              <!-- Menu Burger -->
+              <div class="button-wrap right menu burger-lines">
+                <!-- <a
+                  class="dot tooltip-toggle"
+                  href="https://calendly.com/pntalex/30min"
+                  aria-label="Prendre rendez-vous"
+                >
+                  <div class="before-span"></div>
+                </a> -->
+
+                <div class="button-text sticky right">
+                  <span data-hover="Menu">Menu</span>
+                </div>
+
+                <div class="icon-wrap parallax-wrap">
+                  <div class="button-icon parallax-element">
+                    <div id="burger-wrapper">
+                      <div id="menu-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Menu Burger -->
+            </div>
+          </header>
+          <!--/Header -->
+
+          <!-- Content Scroll -->
+          <div id="content-scroll">
+            <!-- Main -->
+            <div id="main">
+              <!-- Hero Section -->
+              <div id="hero" class="has-image">
+                <div id="hero-styles">
+                  <div
+                    id="hero-caption"
+                    class="content-max-width marquee-title"
+                  >
+                    <div class="inner">
+                      <div class="hero-arrow"><i class="arrow-icon"></i></div>
+                      <div class="hero-subtitle">
+                        <span>2024</span>
+                        <div
+                          style="width: fit-content"
+                          class="button-wrap right button-link large-btn has-animation"
+                        >
+                          <!-- <div class="icon-wrap parallax-wrap">
+                            <div class="button-icon parallax-element">
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                          </div> -->
+                          <a
+                            href="https://selfearuv-nuxt.vercel.app"
+                            target="blank"
+                            ><div class="button-text sticky right">
+                              <span data-hover="Voir le site"
+                                >Voir le site</span
+                              >
+                            </div></a
+                          >
+                        </div>
+                      </div>
+                      <div class="hero-title-wrapper">
+                        <h1 class="hero-title">
+                          <span>Selfear</span><span>Selfear</span
+                          ><span>Selfear</span><span>Selfear</span>
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hero-footer">
+                    <div class="hero-footer-right">
+                      <div class="button-wrap right scroll-down">
+                        <div class="icon-wrap parallax-wrap">
+                          <div class="button-icon parallax-element">
+                            <i class="fa fa-angle-down"></i>
+                          </div>
+                        </div>
+                        <div class="button-text sticky right">
+                          <span data-hover="Scroll to navigate">Scroll</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hero-description" class="content-max-width">
+                    <div class="inner">
+                      <div class="hero-text">
+                        <span
+                          >Site web vitrine du peintre Selfear, qui présente son
+                          univers et l'étendue de ses créations</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="hero-image-wrapper">
+                <div id="hero-background-layer" class="parallax-scroll-image">
+                  <div
+                    id="hero-bg-image"
+                    style="
+                      background-image: url(../images/projects/selfear/preview1.webp);
+                    "
+                  ></div>
+                </div>
+              </div>
+              <!--/Hero Section -->
+
+              <!-- Main Content -->
+              <div id="main-content">
+                <div id="main-page-content">
+                  <!-- Row -->
+                  <div
+                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div class="one_fourth"></div>
+
+                    <div class="two_fourth">
+                      <h2 class="has-mask-fill">Besoin du projet.</h2>
+                    </div>
+
+                    <div class="one_fourth last"></div>
+
+                    <hr />
+
+                    <div class="one_fourth">
+                      <span class="has-animation has-icon">Le projet.</span>
+                    </div>
+
+                    <div class="two_fourth">
+                      <p class="has-animation" data-delay="100">
+                        Le peintre Selfear a constaté qu'il avait besoin d'une
+                        plateforme plus personnalisée pour mettre en avant ses
+                        œuvres, au-delà d'une simple vitrine sur les réseaux
+                        sociaux. Son site web est conçu pour être une œuvre
+                        d'art en soi, permettant de refléter son histoire et la
+                        mise en scène qu'il souhaite pour présenter ses
+                        créations. C'est pourquoi la création d'un site web qui
+                        reflète sa vision artistique s'est avérée
+                        indispensable.<br /><br />
+                        La création de ce site web est un projet qui vise à
+                        offrir une expérience utilisateur unique et immersive,
+                        permettant aux visiteurs de découvrir les œuvres de
+                        Selfear de manière interactive et personnalisée. Le site
+                        sera conçu pour mettre en valeur les détails de chaque
+                        pièce, avec des descriptions et des images de haute
+                        qualité. Les visiteurs pourront ainsi explorer l'univers
+                        créatif de Selfear de manière approfondie et découvrir
+                        l'histoire derrière chaque œuvre.
+                      </p>
+                    </div>
+
+                    <div class="one_fourth last"></div>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row full dark-section"
+                    data-bgcolor="#171717"
+                  >
+                    <figure
+                      class="has-parallax has-parallax-content"
+                      data-delay="100"
+                    >
+                      <img
+                        src="../images/projects/selfear/preview2.webp"
+                        alt="Image Title"
+                      />
+                      <div
+                        class="parallax-image-content content-max-width text-align-center"
+                      ></div>
+                    </figure>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row row_padding_top light-section change-header-color"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div class="one_fourth text-align-right">
+                      <span class="has-opacity">01</span>
+                    </div>
+
+                    <div class="two_fourth">
+                      <h2 class="has-mask-fill block-title">La recherche.</h2>
+                    </div>
+
+                    <div class="one_fourth last"></div>
+
+                    <hr />
+
+                    <div class="one_fourth"></div>
+
+                    <div class="two_fourth">
+                      <!-- <h6 class="has-animation has-icon1">Objective</h6> -->
+                      <p class="has-animation" data-delay="100">
+                        Le peintre avait pour objectif de créer un site web
+                        minimaliste, dynamique, rapide et contemporain. Il
+                        souhaitait également mettre en avant ses créations au
+                        cœur de son site, en utilisant une mise en page soignée
+                        pour les mettre en valeur.
+                      </p>
+                    </div>
+
+                    <div class="one_fourth last"></div>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row light-section full change-header-color"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div class="zoom-gallery">
+                      <ul class="zoom-wrapper-gallery">
+                        <li>
+                          <div class="zoom-img-wrapper">
+                            <img
+                              src="../images/projects/selfear/preview3.webp"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="zoom-img-wrapper">
+                            <img
+                              src="../images/projects/selfear/preview4.webp"
+                            />
+                          </div>
+                        </li>
+                        <li class="zoom-center">
+                          <div class="zoom-img-wrapper">
+                            <img
+                              src="../images/projects/selfear/preview5.webp"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="zoom-img-wrapper">
+                            <img
+                              src="../images/projects/selfear/preview1.webp"
+                            />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="zoom-img-wrapper">
+                            <img
+                              src="../images/projects/selfear/preview2.webp"
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div class="one_fourth"></div>
+
+                    <div class="one_fourth text-align-right">
+                      <span class="has-opacity">02</span>
+                    </div>
+
+                    <div class="two_fourth last">
+                      <h2 class="has-mask-fill block-title">
+                        Choix du design.
+                      </h2>
+                    </div>
+
+                    <hr />
+
+                    <div class="one_fourth"></div>
+
+                    <div class="one_fourth"></div>
+
+                    <div class="two_fourth last">
+                      <!-- <h6 class="has-animation has-icon1">Objective</h6> -->
+                      <p class="has-animation" data-delay="100">
+                        L'objectif principal de ce site web est de mettre en
+                        avant les oeuvres de l'artiste de manière claire et
+                        attrayante. Pour cela, une organisation de l'information
+                        moderne, épurée et animée a été adoptée, permettant aux
+                        visiteurs de découvrir facilement les créations de
+                        l'artiste. <br />Cette approche permet de focaliser
+                        l'attention sur les peintures, offrant une expérience de
+                        navigation fluide et intuitive pour les utilisateurs.
+                      </p>
+                    </div>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row light-section change-header-color full"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div
+                      class="one_half vertical-parallax"
+                      data-startparallax="0.05"
+                      data-endparallax="0.05"
+                    >
+                      <figure>
+                        <a
+                          href="../images/projects/selfear/preview3.webp"
+                          class="image-link"
+                          ><img
+                            src="../images/projects/selfear/preview3.webp"
+                            alt="Image Title"
+                        /></a>
+                        <figcaption>Page "Les sites et monuments"</figcaption>
+                      </figure>
+                    </div>
+
+                    <div
+                      class="one_half last vertical-parallax"
+                      data-startparallax="0.3"
+                      data-endparallax="0.3"
+                    >
+                      <figure>
+                        <a
+                          href="../images/projects/selfear/preview2.webp"
+                          class="image-link"
+                          ><img
+                            src="../images/projects/selfear/preview2.webp"
+                            alt="Image Title"
+                        /></a>
+                        <figcaption>Page "L'Histoire d'Édimbourg"</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <!--/Row -->
+
+                  <!-- Row -->
+                  <div
+                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                    data-bgcolor="#eceff1"
+                  >
+                    <div class="two_fourth">
+                      <h2 class="has-mask-fill block-title">
+                        Le&nbsp;mot de&nbsp;la&nbsp;fin.
+                      </h2>
+                    </div>
+
+                    <div class="one_fourth"></div>
+
+                    <div class="one_fourth last"></div>
+
+                    <hr />
+
+                    <div class="two_fourth last">
+                      <!-- <h6 class="has-animation has-icon1">Objective</h6> -->
+                      <p class="has-animation" data-delay="100">
+                        C'était donc un véritable plaisir de rendre accessible
+                        toutes ces oeuvres de manière moderne, attrayante et
+                        interactive ! Merci pour ta confiance Selfear :)
+                      </p>
+                    </div>
+
+                    <div class="one_fourth"></div>
+
+                    <div class="one_fourth last"></div>
+                  </div>
+                  <!--/Row -->
+                </div>
+                <!--/Main Page Content -->
+
+                <!-- Project Navigation -->
+                <!-- <div id="project-nav" class="" data-bgcolor="#171717">
+                  <div class="next-project-wrap">
+                    <div class="next-project-caption content-max-width">
+                      <div class="next-caption-wrapper">
+                        <div class="caption-wrapper">
+                          <a
+                            class="next-ajax-link-project"
+                            data-color="#963a8d"
+                            data-firstline="Projet"
+                            data-secondline="suivant"
+                            href="./agence-jam.html"
+                          ></a>
+                          <div class="next-caption">
+                            <div class="next-hero-subtitle">
+                              <span>Projet</span> <span>suivant.</span>
+                            </div>
+                            <div class="next-hero-progress"><span></span></div>
+                            <div class="next-hero-title">
+                              <span>Agence</span> <span>Jam.</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="next-project-image-wrapper">
+                      <div class="next-project-image">
+                        <div
+                          class="next-project-image-bg"
+                          style="background-image: url(images/02hero.webp)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!--/Project Navigation -->
+              </div>
+              <!--/Main Content -->
+            </div>
+            <!--/Main -->
+
+            <!-- Footer -->
+            <footer class="hidden">
+              <div id="footer-container">
+                <div id="backtotop" class="button-wrap left">
+                  <div class="icon-wrap parallax-wrap">
+                    <div class="button-icon parallax-element">
+                      <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                  </div>
+                  <div class="button-text sticky left">
+                    <span data-hover="Haut de page">Haut de page</span>
+                  </div>
+                </div>
+
+                <div class="footer-middle">
+                  <div class="copyright">
+                    2024 ©
+                    <a
+                      class="link"
+                      target="_blank"
+                      href="https://www.alexandre-pinot.com/"
+                      >Alexandre Pinot</a
+                    >. All rights reserved.
+                  </div>
+                </div>
+
+                <div class="socials-wrap">
+                  <div class="socials-icon">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </div>
+                  <div class="socials-text">Contactez-moi</div>
+                  <ul class="socials">
+                    <li>
+                      <span class="parallax-wrap"
+                        ><a
+                          class="parallax-element"
+                          href="https://github.com/pntAlex"
+                          target="_blank"
+                          >Gi</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <span class="parallax-wrap"
+                        ><a
+                          class="parallax-element"
+                          href="https://instagram.com/alex__pnt0"
+                          >In</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <span class="parallax-wrap"
+                        ><a
+                          class="parallax-element"
+                          href="https://www.linkedin.com/in/alexandre-p-191727180/"
+                          >Li</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+            <!--/Footer -->
+          </div>
+          <!--/Content Scroll -->
+
+          <div id="app"></div>
+        </div>
+        <!--/Page Content -->
+      </div>
+    </main>
+
+    <div class="cd-cover-layer"></div>
+    <div id="magic-cursor">
+      <div id="ball">
+        <div id="ball-drag-x"></div>
+        <div id="ball-drag-y"></div>
+        <div id="ball-loader"></div>
+      </div>
+    </div>
+    <div id="clone-image">
+      <div class="hero-translate"></div>
+    </div>
+    <div id="rotate-device"></div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="../js/clapatwebgl.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
