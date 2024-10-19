@@ -216,7 +216,7 @@ Function Scroll Effects
                 scrollTrigger: {
                   trigger: zoomGallery,
                   start: "top top",
-                  end: "+=" + innerHeight * 3,
+                  end: "+=" + innerHeight * 1.25,
                   scrub: true,
                   pin: zoomGallery,
                 },
