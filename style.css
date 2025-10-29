@@ -4014,14 +4014,14 @@ nav.open {
   display: inline-block;
   color: inherit;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding-bottom: 0;
 }
 
 .credit-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0.4em;
   width: 100%;
   height: 1px;
   background: currentColor;
@@ -4034,4 +4034,3 @@ nav.open {
 .credit-link:focus::after {
   transform: scaleX(1);
 }
-
