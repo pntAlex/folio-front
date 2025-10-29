@@ -4160,7 +4160,24 @@ Function Core
       }
 
       function loadNewContent(url, bool) {
-        url = "" == url ? "index.html" : url
+        let targetUrl = url ?? "/"
+
+        try {
+          const parsed = new URL(targetUrl, window.location.origin)
+          targetUrl = parsed.pathname + parsed.search
+        } catch (error) {
+          targetUrl = targetUrl || "/"
+        }
+
+        if (!targetUrl.startsWith("/")) {
+          targetUrl = "/" + targetUrl.replace(/^\/+/, "")
+        }
+
+        if (targetUrl.length > 1 && targetUrl.endsWith("/")) {
+          targetUrl = targetUrl.replace(/\/+$/, "") || "/"
+        }
+
+        url = targetUrl || "/"
 
         var section = $('<div class="cd-main-content "></div>')
 

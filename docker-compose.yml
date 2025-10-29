@@ -1,0 +1,12 @@
+services:
+  folio:
+    build:
+      context: .
+    ports:
+      - "${HOST_PORT}:${PORT}"
+    environment:
+      PORT: ${PORT}
+      STATIC_ROOT: ${STATIC_ROOT}
+      FALLBACK_HTML: ${FALLBACK_HTML}
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
