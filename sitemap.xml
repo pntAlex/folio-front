@@ -32,4 +32,24 @@
     <loc>https://alexandrepinot.fr/projects/whelkom</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://alexandrepinot.fr/projects/icomos</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alexandrepinot.fr/projects/rocket-school</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alexandrepinot.fr/projects/ensaplv</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alexandrepinot.fr/projects/mucem</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alexandrepinot.fr/projects/villa-medicis</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
