@@ -3,6 +3,7 @@ import { join, normalize, resolve } from "path";
 const port = Number(Bun.env.PORT ?? 3000);
 const root = resolve(Bun.env.STATIC_ROOT ?? ".");
 const fallbackDocument = Bun.env.FALLBACK_HTML ?? "index.html";
+const notFoundDocument = Bun.env.NOT_FOUND_HTML ?? "404.html";
 const runtimeEnv = (Bun.env.NODE_ENV ?? "production").toLowerCase();
 const isDevelopment = runtimeEnv === "development" || runtimeEnv === "dev";
 
@@ -71,11 +72,27 @@ const resolveCacheControl = (filePath: string) => {
   return "public, max-age=86400";
 };
 
-const respondNotFound = (request: Request) => {
+const respondNotFound = async (request: Request) => {
   const headers = new Headers();
   headers.set("Cache-Control", "no-cache");
   headers.set("Vary", "Accept-Encoding");
   securityHeaders(headers);
+
+  const notFoundPath = join(root, notFoundDocument);
+  const notFoundFile = Bun.file(notFoundPath);
+
+  if (await notFoundFile.exists()) {
+    const fileHeaders = new Headers(headers);
+    if (notFoundFile.type) {
+      fileHeaders.set("Content-Type", notFoundFile.type);
+    }
+
+    if (request.method === "HEAD") {
+      return new Response(null, { status: 404, headers: fileHeaders });
+    }
+
+    return new Response(notFoundFile, { status: 404, headers: fileHeaders });
+  }
 
   if (request.method === "HEAD") {
     return new Response(null, { status: 404, headers });
