@@ -3,6 +3,8 @@ import { join, normalize, resolve } from "path";
 const port = Number(Bun.env.PORT ?? 3000);
 const root = resolve(Bun.env.STATIC_ROOT ?? ".");
 const fallbackDocument = Bun.env.FALLBACK_HTML ?? "index.html";
+const runtimeEnv = (Bun.env.NODE_ENV ?? "production").toLowerCase();
+const isDevelopment = runtimeEnv === "development" || runtimeEnv === "dev";
 
 type StaticFile = ReturnType<typeof Bun.file>;
 
@@ -49,6 +51,10 @@ const sanitizePath = (pathname: string) => {
 };
 
 const resolveCacheControl = (filePath: string) => {
+  if (isDevelopment) {
+    return "no-cache";
+  }
+
   const extension = filePath.split(".").pop()?.toLowerCase();
   if (!extension) {
     return "public, max-age=60";
@@ -162,4 +168,7 @@ Bun.serve({
   },
 });
 
-console.log(`Site servi sur http://localhost:${port}`);
+console.log(`Site servi sur http://localhost:${port} (mode: ${isDevelopment ? "development" : "production"})`);
+if (isDevelopment) {
+  console.log("- Cache HTTP désactivé\n- Redémarrage automatique via bun --watch");
+}
