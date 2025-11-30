@@ -1,476 +1,618 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <title>Alexandre Pinot | Projets - Villa Médicis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Villa Médicis : site sobre, performant et fidèle à l'âme de l'Académie de France à Rome."
-    />
-    <meta name="author" content="Alexandre Pinot" />
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="../favicon.ico" />
-    <link href="../style.css" rel="stylesheet" />
-    <link href="../css/all.min.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-      rel="stylesheet"
-    />
+    <head>
+        <title>Alexandre Pinot | Projets - Villa Médicis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Villa Médicis : site sobre, performant et fidèle à l'âme de l'Académie de France à Rome."
+        />
+        <meta name="author" content="Alexandre Pinot" />
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/ico" href="../favicon.ico" />
+        <link href="../style.css" rel="stylesheet" />
+        <link href="../css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+            rel="stylesheet"
+        />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/favicon-16x16.png"
-    />
-    <link rel="manifest" href="../assets/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="../assets/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../assets/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="../assets/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="../assets/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <script
+            defer
+            src="http://localhost:3001/script.js"
+            data-website-id="77cf6a85-6f14-474e-a783-a917526bb83c"
+        ></script>
+    </head>
 
-  <body class="hidden hidden-ball smooth-scroll" data-primary-color="#171717">
-    <main>
-      <!-- Preloader -->
-      <div
-        class="preloader-wrap"
-        data-firstline="Work in"
-        data-secondline="Progress"
-      >
-        <div class="outer">
-          <div class="inner">
-            <div class="trackbar">
-              <ul class="preloader-intro">
-                <li class="preloader-list">Alexandre</li>
-                <li class="preloader-list">Pinot</li>
-                <li class="preloader-list">Développeur</li>
-                <li class="preloader-list">Front-End</li>
-              </ul>
-              <div class="loadbar"></div>
-            </div>
-            <div class="percentage-wrapper">
-              <div class="percentage" id="precent"></div>
-            </div>
-            <div class="percentage-intro">W.I.P</div>
-          </div>
-        </div>
-      </div>
-      <!--/Preloader -->
-
-      <div class="cd-index cd-main-content">
-        <!-- Page Content -->
-        <div id="page-content" class="light-content" data-bgcolor="#171717">
-          <!-- Header -->
-          <header
-            class="fullscreen-menu invert-header"
-            data-menucolor="#171717"
-          >
-            <div id="header-container">
-              <!-- Logo -->
-              <div id="logo" class="hide-ball">
-                <a class="ajax-link" data-type="page-transition" href="/">
-                  <img
-                    class="black-logo"
-                    src="../assets/logo-light.webp"
-                    alt="Alexandre Pinot Logo"
-                  />
-                  <img
-                    class="white-logo"
-                    src="../assets/logo-light.webp"
-                    alt="Alexandre Pinot Logo"
-                  />
-                </a>
-              </div>
-              <!--/Logo -->
-
-              <!-- Navigation -->
-              <nav>
-                <div class="nav-height">
-                  <div class="outer">
+    <body class="hidden hidden-ball smooth-scroll" data-primary-color="#171717">
+        <main>
+            <!-- Preloader -->
+            <div
+                class="preloader-wrap"
+                data-firstline="Work in"
+                data-secondline="Progress"
+            >
+                <div class="outer">
                     <div class="inner">
-                      <ul data-breakpoint="10025" class="flexnav">
-                        <li class="link menu-timeline">
-                          <a
-                            class="ajax-link"
-                            data-type="page-transition"
-                            href="/"
-                            ><div class="before-span">
-                              <span data-hover="Accueil">Accueil</span>
-                            </div></a
-                          >
-                        </li>
-                        <li class="link menu-timeline">
-                          <a
-                            class="ajax-link active"
-                            data-type="page-transition"
-                            href="/realisations"
-                            ><div class="before-span">
-                              <span data-hover="Réalisations"
-                                >Réalisations</span
-                              >
-                            </div></a
-                          >
-                        </li>
-                        <li class="link menu-timeline">
-                          <a
-                            class="ajax-link"
-                            data-type="page-transition"
-                            href="/about"
-                            ><div class="before-span">
-                              <span data-hover="À propos">À propos</span>
-                            </div></a
-                          >
-                        </li>
-                        <li class="link menu-timeline">
-                          <a
-                            class="ajax-link"
-                            data-type="page-transition"
-                            href="/contact"
-                            ><div class="before-span">
-                              <span data-hover="Contact">Contact</span>
-                            </div></a
-                          >
-                        </li>
-                      </ul>
+                        <div class="trackbar">
+                            <ul class="preloader-intro">
+                                <li class="preloader-list">Alexandre</li>
+                                <li class="preloader-list">Pinot</li>
+                                <li class="preloader-list">Développeur</li>
+                                <li class="preloader-list">Front-End</li>
+                            </ul>
+                            <div class="loadbar"></div>
+                        </div>
+                        <div class="percentage-wrapper">
+                            <div class="percentage" id="precent"></div>
+                        </div>
+                        <div class="percentage-intro">W.I.P</div>
                     </div>
-                  </div>
                 </div>
-              </nav>
-              <!--/Navigation -->
-
-              <!-- Menu Burger -->
-              <div class="button-wrap right menu burger-lines">
-                <div class="button-text sticky right">
-                  <span data-hover="Menu">Menu</span>
-                </div>
-
-                <div class="icon-wrap parallax-wrap">
-                  <div class="button-icon parallax-element">
-                    <div id="burger-wrapper">
-                      <div id="menu-burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--/Menu Burger -->
             </div>
-          </header>
-          <!--/Header -->
+            <!--/Preloader -->
 
-          <!-- Content Scroll -->
-          <div id="content-scroll">
-            <!-- Main -->
-            <div id="main">
-              <!-- Hero Section -->
-              <div id="hero">
-                <div id="hero-styles">
-                  <div
-                    id="hero-caption"
-                    class="content-max-width parallax-scroll-caption"
-                  >
-                    <div class="inner">
-                      <div class="hero-arrow"><i class="arrow-icon"></i></div>
-                      <div class="hero-subtitle">
-                        <span>2024</span>
-                        <div
-                          style="width: fit-content"
-                          class="button-wrap right button-link large-btn has-animation"
-                        >
-                          <a
-                            href="https://www.villamedici.it/"
-                            target="_blank"
-                            rel="noopener"
-                            ><div class="button-text sticky right">
-                              <span data-hover="Voir le projet"
-                                >Voir le projet</span
-                              >
-                            </div></a
-                          >
-                        </div>
-                      </div>
-                      <div class="hero-title-wrapper">
-                        <h1 class="hero-title">
-                          <span>Villa</span><span>Médicis</span
-                          ><span>Villa</span><span>Médicis</span>
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="hero-footer">
-                    <div class="hero-footer-right">
-                      <div class="button-wrap right scroll-down">
-                        <div class="icon-wrap parallax-wrap">
-                          <div class="button-icon parallax-element">
-                            <i class="fa fa-angle-down"></i>
-                          </div>
-                        </div>
-                        <div class="button-text sticky right">
-                          <span data-hover="Scroll to navigate">Scroll</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="hero-description" class="content-max-width">
-                    <div class="inner">
-                      <div class="hero-text">
-                        <span
-                          >Expérience digitale sobre et performante pour la Villa Médicis.</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="hero-image-wrapper">
-                <div id="hero-background-layer" class="parallax-scroll-image">
-                  <div
-                    id="hero-bg-image"
-                    style="
-                      background-image: url(/images/projets/villa-medicis/hero.webp);
-                    "
-                  ></div>
-                </div>
-              </div>
-              <!--/Hero Section -->
-
-              <!-- Main Content -->
-              <div id="main-content">
-                <div id="main-page-content">
-                  <!-- Contexte -->
-                  <div
-                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
-                    data-bgcolor="#eceff1"
-                  >
-                    <div class="one_fourth"></div>
-
-                    <div class="two_fourth">
-                      <h2 class="has-mask-fill">Mission</h2>
-                    </div>
-
-                    <div class="one_fourth last"></div>
-
-                    <hr />
-
-                    <div class="one_fourth">
-                      <span class="has-animation has-icon"
-                        >Un monument vivant.</span
-                      >
-                    </div>
-
-                    <div class="two_fourth">
-                      <p class="has-animation" data-delay="100">
-                        La Villa Médicis est à la fois patrimoine, résidence et lieu d'expositions. Le site devait restituer cette diversité sans perdre la poésie du lieu ni l'exigence de sobriété. La mission a consisté à révéler cette richesse en ligne tout en préservant la chaleur de l'expérience sur place.
-                      </p>
-                    </div>
-
-                    <div class="one_fourth last"></div>
-                  </div>
-
-                  <div
-                    class="content-row full dark-section"
+            <div class="cd-index cd-main-content">
+                <!-- Page Content -->
+                <div
+                    id="page-content"
+                    class="light-content"
                     data-bgcolor="#171717"
-                  >
-                    <figure
-                      class="has-parallax has-parallax-content"
-                      data-delay="100"
+                >
+                    <!-- Header -->
+                    <header
+                        class="fullscreen-menu invert-header"
+                        data-menucolor="#171717"
                     >
-                      <img
-                        src="/images/projets/villa-medicis/preview1.webp"
-                        alt="Refonte du site de la Villa Médicis"
-                      />
-                    </figure>
-                  </div>
+                        <div id="header-container">
+                            <!-- Logo -->
+                            <div id="logo" class="hide-ball">
+                                <a
+                                    class="ajax-link"
+                                    data-type="page-transition"
+                                    href="/"
+                                >
+                                    <img
+                                        class="black-logo"
+                                        src="../assets/logo-light.webp"
+                                        alt="Alexandre Pinot Logo"
+                                    />
+                                    <img
+                                        class="white-logo"
+                                        src="../assets/logo-light.webp"
+                                        alt="Alexandre Pinot Logo"
+                                    />
+                                </a>
+                            </div>
+                            <!--/Logo -->
 
-                  <!-- Approche -->
-                  <div
-                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
-                    data-bgcolor="#eceff1"
-                  >
-                    <div class="one_fourth"></div>
+                            <!-- Navigation -->
+                            <nav>
+                                <div class="nav-height">
+                                    <div class="outer">
+                                        <div class="inner">
+                                            <ul
+                                                data-breakpoint="10025"
+                                                class="flexnav"
+                                            >
+                                                <li class="link menu-timeline">
+                                                    <a
+                                                        class="ajax-link"
+                                                        data-type="page-transition"
+                                                        href="/"
+                                                        ><div
+                                                            class="before-span"
+                                                        >
+                                                            <span
+                                                                data-hover="Accueil"
+                                                                >Accueil</span
+                                                            >
+                                                        </div></a
+                                                    >
+                                                </li>
+                                                <li class="link menu-timeline">
+                                                    <a
+                                                        class="ajax-link active"
+                                                        data-type="page-transition"
+                                                        href="/realisations"
+                                                        ><div
+                                                            class="before-span"
+                                                        >
+                                                            <span
+                                                                data-hover="Réalisations"
+                                                                >Réalisations</span
+                                                            >
+                                                        </div></a
+                                                    >
+                                                </li>
+                                                <li class="link menu-timeline">
+                                                    <a
+                                                        class="ajax-link"
+                                                        data-type="page-transition"
+                                                        href="/about"
+                                                        ><div
+                                                            class="before-span"
+                                                        >
+                                                            <span
+                                                                data-hover="À propos"
+                                                                >À propos</span
+                                                            >
+                                                        </div></a
+                                                    >
+                                                </li>
+                                                <li class="link menu-timeline">
+                                                    <a
+                                                        class="ajax-link"
+                                                        data-type="page-transition"
+                                                        href="/contact"
+                                                        ><div
+                                                            class="before-span"
+                                                        >
+                                                            <span
+                                                                data-hover="Contact"
+                                                                >Contact</span
+                                                            >
+                                                        </div></a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                            <!--/Navigation -->
 
-                    <div class="one_fourth text-align-right">
-                      <span class="has-opacity">Approche</span>
+                            <!-- Menu Burger -->
+                            <div class="button-wrap right menu burger-lines">
+                                <div class="button-text sticky right">
+                                    <span data-hover="Menu">Menu</span>
+                                </div>
+
+                                <div class="icon-wrap parallax-wrap">
+                                    <div class="button-icon parallax-element">
+                                        <div id="burger-wrapper">
+                                            <div id="menu-burger">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Menu Burger -->
+                        </div>
+                    </header>
+                    <!--/Header -->
+
+                    <!-- Content Scroll -->
+                    <div id="content-scroll">
+                        <!-- Main -->
+                        <div id="main">
+                            <!-- Hero Section -->
+                            <div id="hero">
+                                <div id="hero-styles">
+                                    <div
+                                        id="hero-caption"
+                                        class="content-max-width parallax-scroll-caption"
+                                    >
+                                        <div class="inner">
+                                            <div class="hero-arrow">
+                                                <i class="arrow-icon"></i>
+                                            </div>
+                                            <div class="hero-subtitle">
+                                                <span>2024</span>
+                                                <div
+                                                    style="width: fit-content"
+                                                    class="button-wrap right button-link large-btn has-animation"
+                                                >
+                                                    <a
+                                                        href="https://www.villamedici.it/"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        ><div
+                                                            class="button-text sticky right"
+                                                        >
+                                                            <span
+                                                                data-hover="Voir le projet"
+                                                                >Voir le
+                                                                projet</span
+                                                            >
+                                                        </div></a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="hero-title-wrapper">
+                                                <h1 class="hero-title">
+                                                    <span>Villa</span
+                                                    ><span>Médicis</span
+                                                    ><span>Villa</span
+                                                    ><span>Médicis</span>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="hero-footer">
+                                        <div class="hero-footer-right">
+                                            <div
+                                                class="button-wrap right scroll-down"
+                                            >
+                                                <div
+                                                    class="icon-wrap parallax-wrap"
+                                                >
+                                                    <div
+                                                        class="button-icon parallax-element"
+                                                    >
+                                                        <i
+                                                            class="fa fa-angle-down"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="button-text sticky right"
+                                                >
+                                                    <span
+                                                        data-hover="Scroll to navigate"
+                                                        >Scroll</span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        id="hero-description"
+                                        class="content-max-width"
+                                    >
+                                        <div class="inner">
+                                            <div class="hero-text">
+                                                <span
+                                                    >Expérience digitale sobre
+                                                    et performante pour la Villa
+                                                    Médicis.</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="hero-image-wrapper">
+                                <div
+                                    id="hero-background-layer"
+                                    class="parallax-scroll-image"
+                                >
+                                    <div
+                                        id="hero-bg-image"
+                                        style="
+                                            background-image: url(/images/projets/villa-medicis/hero.webp);
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <!--/Hero Section -->
+
+                            <!-- Main Content -->
+                            <div id="main-content">
+                                <div id="main-page-content">
+                                    <!-- Contexte -->
+                                    <div
+                                        class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                                        data-bgcolor="#eceff1"
+                                    >
+                                        <div class="one_fourth"></div>
+
+                                        <div class="two_fourth">
+                                            <h2 class="has-mask-fill">
+                                                Mission
+                                            </h2>
+                                        </div>
+
+                                        <div class="one_fourth last"></div>
+
+                                        <hr />
+
+                                        <div class="one_fourth">
+                                            <span class="has-animation has-icon"
+                                                >Un monument vivant.</span
+                                            >
+                                        </div>
+
+                                        <div class="two_fourth">
+                                            <p
+                                                class="has-animation"
+                                                data-delay="100"
+                                            >
+                                                La Villa Médicis est à la fois
+                                                patrimoine, résidence et lieu
+                                                d'expositions. Le site devait
+                                                restituer cette diversité sans
+                                                perdre la poésie du lieu ni
+                                                l'exigence de sobriété. La
+                                                mission a consisté à révéler
+                                                cette richesse en ligne tout en
+                                                préservant la chaleur de
+                                                l'expérience sur place.
+                                            </p>
+                                        </div>
+
+                                        <div class="one_fourth last"></div>
+                                    </div>
+
+                                    <div
+                                        class="content-row full dark-section"
+                                        data-bgcolor="#171717"
+                                    >
+                                        <figure
+                                            class="has-parallax has-parallax-content"
+                                            data-delay="100"
+                                        >
+                                            <img
+                                                src="/images/projets/villa-medicis/preview1.webp"
+                                                alt="Refonte du site de la Villa Médicis"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <!-- Approche -->
+                                    <div
+                                        class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                                        data-bgcolor="#eceff1"
+                                    >
+                                        <div class="one_fourth"></div>
+
+                                        <div
+                                            class="one_fourth text-align-right"
+                                        >
+                                            <span class="has-opacity"
+                                                >Approche</span
+                                            >
+                                        </div>
+
+                                        <div class="two_fourth last">
+                                            <h2
+                                                class="has-mask-fill block-title"
+                                            >
+                                                Approche
+                                            </h2>
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="one_fourth"></div>
+
+                                        <div class="two_fourth">
+                                            <p
+                                                class="has-animation"
+                                                data-delay="100"
+                                            >
+                                                Le projet repose sur une
+                                                architecture sur mesure afin de
+                                                garantir vitesse, SEO et
+                                                sobriété. Scripts rationalisés,
+                                                lazy loading systématique et
+                                                typographies minimalistes
+                                                réduisent le poids de chaque
+                                                page. L'expérience place
+                                                billetterie, programmation et
+                                                résidence dans des parcours
+                                                lumineux inspirés de
+                                                l'architecture du lieu.
+                                            </p>
+                                        </div>
+
+                                        <div class="one_fourth last"></div>
+                                    </div>
+
+                                    <div
+                                        class="content-row full light-section change-header-color"
+                                        data-bgcolor="#eceff1"
+                                    >
+                                        <figure
+                                            class="has-parallax"
+                                            data-delay="100"
+                                        >
+                                            <img
+                                                src="/images/projets/villa-medicis/preview2.webp"
+                                                alt="Composants éco-conçus de la Villa Médicis"
+                                            />
+                                        </figure>
+                                    </div>
+
+                                    <!-- Résultats -->
+                                    <div
+                                        class="content-row row_padding_top row_padding_bottom light-section change-header-color"
+                                        data-bgcolor="#eceff1"
+                                    >
+                                        <div class="one_fourth"></div>
+
+                                        <div class="two_fourth">
+                                            <h2 class="has-mask-fill">
+                                                Impact
+                                            </h2>
+                                        </div>
+
+                                        <div class="one_fourth last"></div>
+
+                                        <hr />
+
+                                        <div class="one_fourth">
+                                            <span class="has-animation has-icon"
+                                                >Résultats.</span
+                                            >
+                                        </div>
+
+                                        <div class="two_fourth">
+                                            <p
+                                                class="has-animation"
+                                                data-delay="100"
+                                            >
+                                                La Villa dispose désormais d'un
+                                                média digital chaleureux,
+                                                rationnel et rapide. Les
+                                                contenus sont hiérarchisés, la
+                                                billetterie gagne en conversion
+                                                et les indicateurs de sobriété
+                                                sont suivis dans le temps, en
+                                                cohérence avec les engagements
+                                                du projet.
+                                            </p>
+                                            <p
+                                                class="has-animation"
+                                                data-delay="200"
+                                            >
+                                                <span
+                                                    >Crédits&nbsp;: direction
+                                                    artistique & contenu —
+                                                    <a
+                                                        class="credit-link"
+                                                        href="https://hands.fr/"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        >Hands</a
+                                                    >
+                                                    (<a
+                                                        class="credit-link"
+                                                        href="https://hands.fr/projet/la-villa-medicis-a-lere-de-la-performance-ecoresponsable/"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        >projet</a
+                                                    >) · intégration front,
+                                                    optimisation & monitoring —
+                                                    Alexandre Pinot.</span
+                                                >
+                                            </p>
+                                        </div>
+
+                                        <div class="one_fourth last"></div>
+                                    </div>
+                                </div>
+                                <!--/Main Page Content -->
+                            </div>
+                            <!--/Main Content -->
+                        </div>
+                        <!--/Main -->
+
+                        <!-- Footer -->
+                        <footer class="hidden">
+                            <div id="footer-container">
+                                <div id="backtotop" class="button-wrap left">
+                                    <div class="icon-wrap parallax-wrap">
+                                        <div
+                                            class="button-icon parallax-element"
+                                        >
+                                            <i class="fa-solid fa-angle-up"></i>
+                                        </div>
+                                    </div>
+                                    <div class="button-text sticky left">
+                                        <span data-hover="Haut de page"
+                                            >Haut de page</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="footer-middle">
+                                    <div class="copyright">
+                                        2025 ©
+                                        <a
+                                            class="link"
+                                            target="_blank"
+                                            href="https://www.alexandre-pinot.com/"
+                                            >Alexandre Pinot</a
+                                        >. All rights reserved.
+                                    </div>
+                                </div>
+
+                                <div class="socials-wrap">
+                                    <div class="socials-icon">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                    </div>
+                                    <div class="socials-text">
+                                        Contactez-moi
+                                    </div>
+                                    <ul class="socials">
+                                        <li>
+                                            <span class="parallax-wrap"
+                                                ><a
+                                                    class="parallax-element"
+                                                    href="https://github.com/pntAlex"
+                                                    target="_blank"
+                                                    >Gi</a
+                                                ></span
+                                            >
+                                        </li>
+                                        <li>
+                                            <span class="parallax-wrap"
+                                                ><a
+                                                    class="parallax-element"
+                                                    href="https://www.linkedin.com/in/alexandre-p-191727180/"
+                                                    target="_blank"
+                                                    >Li</a
+                                                ></span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </footer>
+                        <!--/Footer -->
                     </div>
-
-                    <div class="two_fourth last">
-                      <h2 class="has-mask-fill block-title">Approche</h2>
-                    </div>
-
-                    <hr />
-
-                    <div class="one_fourth"></div>
-
-                    <div class="two_fourth">
-                      <p class="has-animation" data-delay="100">
-                        Le projet repose sur une architecture sur mesure afin de garantir vitesse, SEO et sobriété. Scripts rationalisés, lazy loading systématique et typographies minimalistes réduisent le poids de chaque page. L'expérience place billetterie, programmation et résidence dans des parcours lumineux inspirés de l'architecture du lieu.
-                      </p>
-                    </div>
-
-                    <div class="one_fourth last"></div>
-                  </div>
-
-                  <div
-                    class="content-row full light-section change-header-color"
-                    data-bgcolor="#eceff1"
-                  >
-                    <figure class="has-parallax" data-delay="100">
-                      <img
-                        src="/images/projets/villa-medicis/preview2.webp"
-                        alt="Composants éco-conçus de la Villa Médicis"
-                      />
-                    </figure>
-                  </div>
-
-                  <!-- Résultats -->
-                  <div
-                    class="content-row row_padding_top row_padding_bottom light-section change-header-color"
-                    data-bgcolor="#eceff1"
-                  >
-                    <div class="one_fourth"></div>
-
-                    <div class="two_fourth">
-                      <h2 class="has-mask-fill">Impact</h2>
-                    </div>
-
-                    <div class="one_fourth last"></div>
-
-                    <hr />
-
-                    <div class="one_fourth">
-                      <span class="has-animation has-icon"
-                        >Résultats.</span
-                      >
-                    </div>
-
-                    <div class="two_fourth">
-                      <p class="has-animation" data-delay="100">
-                        La Villa dispose désormais d'un média digital chaleureux, rationnel et rapide. Les contenus sont hiérarchisés, la billetterie gagne en conversion et les indicateurs de sobriété sont suivis dans le temps, en cohérence avec les engagements du projet.
-                      </p>
-                      <p class="has-animation" data-delay="200">
-                        <span>Crédits&nbsp;: direction artistique & contenu — <a class="credit-link" href="https://hands.fr/" target="_blank" rel="noopener">Hands</a> (<a class="credit-link" href="https://hands.fr/projet/la-villa-medicis-a-lere-de-la-performance-ecoresponsable/" target="_blank" rel="noopener">projet</a>) · intégration front, optimisation & monitoring — Alexandre Pinot.</span>
-                      </p>
-                    </div>
-
-                    <div class="one_fourth last"></div>
-                  </div>
+                    <!--/Content Scroll -->
                 </div>
-                <!--/Main Page Content -->
-              </div>
-              <!--/Main Content -->
+                <!--/Page Content -->
             </div>
-            <!--/Main -->
+        </main>
 
-            <!-- Footer -->
-            <footer class="hidden">
-              <div id="footer-container">
-                <div id="backtotop" class="button-wrap left">
-                  <div class="icon-wrap parallax-wrap">
-                    <div class="button-icon parallax-element">
-                      <i class="fa-solid fa-angle-up"></i>
-                    </div>
-                  </div>
-                  <div class="button-text sticky left">
-                    <span data-hover="Haut de page">Haut de page</span>
-                  </div>
-                </div>
-
-                <div class="footer-middle">
-                  <div class="copyright">
-                    2025 ©
-                    <a
-                      class="link"
-                      target="_blank"
-                      href="https://www.alexandre-pinot.com/"
-                      >Alexandre Pinot</a
-                    >. All rights reserved.
-                  </div>
-                </div>
-
-                <div class="socials-wrap">
-                  <div class="socials-icon">
-                    <i class="fa-solid fa-share-nodes"></i>
-                  </div>
-                  <div class="socials-text">Contactez-moi</div>
-                  <ul class="socials">
-                    <li>
-                      <span class="parallax-wrap"
-                        ><a
-                          class="parallax-element"
-                          href="https://github.com/pntAlex"
-                          target="_blank"
-                          >Gi</a
-                        ></span
-                      >
-                    </li>
-                    <li>
-                      <span class="parallax-wrap"
-                        ><a
-                          class="parallax-element"
-                          href="https://www.linkedin.com/in/alexandre-p-191727180/"
-                          target="_blank"
-                          >Li</a
-                        ></span
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </footer>
-            <!--/Footer -->
-          </div>
-          <!--/Content Scroll -->
+        <div class="cd-cover-layer"></div>
+        <div id="magic-cursor">
+            <div id="ball">
+                <div id="ball-drag-x"></div>
+                <div id="ball-drag-y"></div>
+                <div id="ball-loader"></div>
+            </div>
         </div>
-        <!--/Page Content -->
-      </div>
-    </main>
+        <div id="clone-image">
+            <div class="hero-translate"></div>
+        </div>
+        <div id="rotate-device"></div>
 
-    <div class="cd-cover-layer"></div>
-    <div id="magic-cursor">
-      <div id="ball">
-        <div id="ball-drag-x"></div>
-        <div id="ball-drag-y"></div>
-        <div id="ball-loader"></div>
-      </div>
-    </div>
-    <div id="clone-image">
-      <div class="hero-translate"></div>
-    </div>
-    <div id="rotate-device"></div>
-
-    <script src="../js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script src="../js/clapatwebgl.js"></script>
-    <script src="../js/plugins.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/contact.js"></script>
-    <script src="../js/scripts.js"></script>
-  </body>
+        <script src="../js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+        <script src="../js/clapatwebgl.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/contact.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
 </html>

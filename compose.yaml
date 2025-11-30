@@ -1,0 +1,58 @@
+services:
+  folio:
+    container_name: ${APP_NAME}_front
+    build:
+      context: .
+    ports:
+      - 127.0.0.1:${FRONT_HOST_PORT:-}:3000
+    environment:
+      PORT: 3000
+      STATIC_ROOT: ${FRONT_STATIC_ROOT}
+      FALLBACK_HTML: ${FRONT_FALLBACK_HTML}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - .:/app
+    restart: ${RESTART_POLICY:-always}
+
+  db:
+    container_name: ${APP_NAME}_db
+    image: postgres:15-alpine
+    profiles:
+      - analytics
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - umami-db-data:/var/lib/postgresql/data
+    restart: ${RESTART_POLICY:-always}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  umami:
+    container_name: ${APP_NAME}_analytics
+    image: ghcr.io/umami-software/umami:latest
+    profiles:
+      - analytics
+    ports:
+      - 127.0.0.1:${ANALYTICS_PORT}:3000
+    environment:
+      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@${APP_NAME}_db:5432/${DB_NAME}
+      DATABASE_TYPE: postgresql
+      APP_SECRET: ${ANALYTICS_APP_SECRET}
+    depends_on:
+      db:
+        condition: service_healthy
+    init: true
+    restart: ${RESTART_POLICY:-always}
+    healthcheck:
+      test: ["CMD-SHELL", "curl http://localhost:3000/api/heartbeat"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  umami-db-data:
