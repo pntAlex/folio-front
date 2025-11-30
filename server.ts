@@ -1,10 +1,12 @@
 import { join, normalize, resolve } from "path";
+import { injectUmamiConfig, resolveUmamiConfig } from "./umami";
 
 const port = Number(Bun.env.PORT ?? 3000);
 const root = resolve(Bun.env.STATIC_ROOT ?? ".");
 const fallbackDocument = Bun.env.FALLBACK_HTML ?? "index.html";
 const notFoundDocument = Bun.env.NOT_FOUND_HTML ?? "404.html";
 const runtimeEnv = (Bun.env.NODE_ENV ?? "production").toLowerCase();
+const umamiConfig = resolveUmamiConfig(Bun.env);
 const isDevelopment = runtimeEnv === "development" || runtimeEnv === "dev";
 
 type StaticFile = ReturnType<typeof Bun.file>;
@@ -101,7 +103,7 @@ const respondNotFound = async (request: Request) => {
   return new Response("Not Found", { status: 404, headers });
 };
 
-const buildFileResponse = (
+const buildFileResponse = async (
   file: StaticFile,
   request: Request,
   filePath: string,
@@ -129,11 +131,20 @@ const buildFileResponse = (
     }
   }
 
-  if (request.method === "HEAD") {
-    return new Response(null, { status: 200, headers });
+  const isHtml =
+    filePath.toLowerCase().endsWith(".html") || mimeType?.includes("text/html");
+  if (request.method === "HEAD" || !isHtml) {
+    if (request.method === "HEAD") {
+      return new Response(null, { status: 200, headers });
+    }
+
+    return new Response(file, { headers });
   }
 
-  return new Response(file, { headers });
+  const html = await file.text();
+  const hydratedHtml = injectUmamiConfig(html, umamiConfig);
+
+  return new Response(hydratedHtml, { headers });
 };
 
 const serveStatic = async (request: Request) => {
@@ -185,7 +196,11 @@ Bun.serve({
   },
 });
 
-console.log(`Site servi sur http://localhost:${port} (mode: ${isDevelopment ? "development" : "production"})`);
+console.log(
+  `Site servi sur http://localhost:${port} (mode: ${isDevelopment ? "development" : "production"})`,
+);
 if (isDevelopment) {
-  console.log("- Cache HTTP désactivé\n- Redémarrage automatique via bun --watch");
+  console.log(
+    "- Cache HTTP désactivé\n- Redémarrage automatique via bun --watch",
+  );
 }
