@@ -149,6 +149,28 @@ const buildFileResponse = async (
 
 const serveStatic = async (request: Request) => {
   const url = new URL(request.url);
+  const trimmedPath = url.pathname.replace(/\/+$/, "") || "/";
+
+  const redirects: Record<string, string> = {
+    "/about": "/a-propos",
+    "/about/": "/a-propos",
+    "/projets/rocket-school": "/projets/ecole-rocket",
+    "/projets/rocket-school/": "/projets/ecole-rocket",
+    "/projets/selfear": "/projets/artiste-selfear",
+    "/projets/selfear/": "/projets/artiste-selfear",
+    "/projets/whelkom": "/projets/agence-whelkom",
+    "/projets/whelkom/": "/projets/agence-whelkom",
+  };
+
+  const redirectTarget = redirects[trimmedPath];
+  if (redirectTarget) {
+    const location = `${redirectTarget}${url.search}`;
+    return new Response(null, {
+      status: 308,
+      headers: { Location: location },
+    });
+  }
+
   const safePath = sanitizePath(url.pathname);
 
   if (!safePath) {
