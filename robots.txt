@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexandrepinot.fr/sitemap.xml
+Sitemap: https://alexandre-pinot.com/sitemap.xml
