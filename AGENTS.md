@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Structure du projet
-Le site est une application statique. Les pages principales (`index.html`, `about.html`, `contact.html`, `realisations.html`) restent à la racine et sont servies sans suffixe `.html` grâce au serveur Bun (`/about`, `/realisations`, etc.). Les styles globaux sont dans `style.css`; les feuilles spécifiques et dépendances tierces vivent dans `css/`. Rangez les icônes et SVG dans `assets/`, les visuels dans `images/`, les polices dans `webfonts/`, et centralisez le JavaScript dans `js/`. Les fichiers SEO (`robots.txt`, `sitemap.xml`) sont à la racine — mettez le sitemap à jour dès qu’une nouvelle page publique est ajoutée.
+Le site est une application statique. Les pages principales (`index.html`, `a-propos.html`, `contact.html`, `realisations.html`) restent à la racine et sont servies sans suffixe `.html` grâce au serveur Bun (`/a-propos`, `/realisations`, etc.). Les styles globaux sont dans `style.css`; les feuilles spécifiques et dépendances tierces vivent dans `css/`. Rangez les icônes et SVG dans `assets/`, les visuels dans `images/`, les polices dans `webfonts/`, et centralisez le JavaScript dans `js/`. Les fichiers SEO (`robots.txt`, `sitemap.xml`) sont à la racine — mettez le sitemap à jour dès qu’une nouvelle page publique est ajoutée.
 
 ## Commandes de développement
 Pas de build system supplémentaire. Pour un aperçu local rapide, lancez `bun server.ts`.  
