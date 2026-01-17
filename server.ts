@@ -217,12 +217,3 @@ Bun.serve({
     return serveStatic(request);
   },
 });
-
-console.log(
-  `Site servi sur http://localhost:${port} (mode: ${isDevelopment ? "development" : "production"})`,
-);
-if (isDevelopment) {
-  console.log(
-    "- Cache HTTP désactivé\n- Redémarrage automatique via bun --watch",
-  );
-}
