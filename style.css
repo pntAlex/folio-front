@@ -16,11 +16,10 @@ Primary use:	Showcase Portfolio
 
 01. General Styles
 02. Magic Cursor
-03. Page Preloader
-04. Header Elements
-05. Main Content
-06. Footer Elements
-07. Responsive Media Querries
+03. Header Elements
+04. Main Content
+05. Footer Elements
+06. Responsive Media Querries
 
 -------------------------------------------------------------------*/
 
@@ -1529,128 +1528,7 @@ scale-up .link,
 }
 
 /*--------------------------------------------------
-	03. Page Preloader
----------------------------------------------------*/
-
-.disable-ajaxload .preloader-wrap {
-    display: none;
-}
-
-.preloader-wrap {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    background: #000;
-    z-index: 1800;
-    text-align: center;
-}
-
-.preloader-wrap .outer {
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-.preloader-wrap .inner {
-    vertical-align: middle;
-    box-sizing: border-box;
-}
-
-.percentage-wrapper {
-    height: 20px;
-    position: absolute;
-    margin-bottom: 20px;
-    right: 80px;
-    bottom: 40px;
-}
-
-.percentage-intro {
-    height: 20px;
-    position: absolute;
-    margin-bottom: 20px;
-    left: 80px;
-    bottom: 40px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.percentage {
-    opacity: 1;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 20px;
-    width: 30px;
-    height: 100px;
-    color: rgba(255, 255, 255, 0.6);
-    display: table;
-    margin: 0 auto;
-}
-
-.percentage::after {
-    content: "%";
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.trackbar {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: table;
-    position: relative;
-    padding: 20px;
-    opacity: 1;
-    overflow: hidden;
-}
-
-.loadbar {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0px;
-    right: 0;
-    overflow: hidden;
-}
-
-.hold-progress-bar {
-    width: 0%;
-    height: 0px;
-    background: rgba(0, 0, 0, 1);
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-}
-
-.preloader-intro {
-    font-weight: 500;
-    position: relative;
-    display: block;
-    font-size: 10vw;
-    line-height: 13vw;
-    height: 13vw;
-    color: #fff;
-    overflow: hidden;
-    margin: 0;
-}
-
-.preloader-intro li {
-    list-style: none;
-    line-height: inherit;
-    margin: 0;
-    color: #fff;
-}
-
-/*--------------------------------------------------
-	04. Header Elements
+	03. Header Elements
 ---------------------------------------------------*/
 
 header {
@@ -2519,7 +2397,7 @@ nav.open {
 }
 
 /*--------------------------------------------------
-	05. Main Content
+	04. Main Content
 ---------------------------------------------------*/
 
 #content-scroll {
@@ -2550,7 +2428,7 @@ nav.open {
 }
 
 /*--------------------------------------------------
-	06. Footer Elements
+	05. Footer Elements
 ---------------------------------------------------*/
 
 footer {
@@ -3148,7 +3026,7 @@ nav.open {
 }
 
 /*--------------------------------------------------
-	07. Responsive
+	06. Responsive
 ---------------------------------------------------*/
 
 @media only screen and (max-width: 1466px) {
@@ -3168,22 +3046,6 @@ nav.open {
 
     .row_padding_right {
         padding-right: 60px;
-    }
-
-    .preloader-intro {
-        font-size: 11vw;
-        line-height: 14vw;
-        height: 14vw;
-    }
-
-    .percentage-wrapper {
-        right: 60px;
-        bottom: 40px;
-    }
-
-    .percentage-intro {
-        left: 60px;
-        bottom: 40px;
     }
 
     header {
@@ -3262,22 +3124,6 @@ nav.open {
 
     #magic-cursor {
         display: none;
-    }
-
-    .preloader-intro {
-        font-size: 12vw;
-        line-height: 16vw;
-        height: 16vw;
-    }
-
-    .percentage-wrapper {
-        right: 40px;
-        bottom: 20px;
-    }
-
-    .percentage-intro {
-        left: 40px;
-        bottom: 20px;
     }
 
     header {
@@ -3699,22 +3545,6 @@ nav.open {
         height: 20px;
     }
 
-    .preloader-intro {
-        font-size: 13vw;
-        line-height: 17vw;
-        height: 17vw;
-    }
-
-    .percentage-wrapper {
-        right: 30px;
-        bottom: 10px;
-    }
-
-    .percentage-intro {
-        left: 30px;
-        bottom: 10px;
-    }
-
     #logo {
         left: 30px;
     }
@@ -3856,22 +3686,6 @@ nav.open {
 
     hr {
         height: 10px;
-    }
-
-    .preloader-intro {
-        font-size: 14vw;
-        line-height: 18vw;
-        height: 18vw;
-    }
-
-    .percentage-wrapper {
-        right: 20px;
-        bottom: 10px;
-    }
-
-    .percentage-intro {
-        left: 20px;
-        bottom: 10px;
     }
 
     #logo {
