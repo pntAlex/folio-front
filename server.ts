@@ -55,7 +55,7 @@ const sanitizePath = (pathname: string) => {
 
 const resolveCacheControl = (filePath: string) => {
   if (isDevelopment) {
-    return "no-cache";
+    return "no-store, max-age=0, must-revalidate";
   }
 
   const extension = filePath.split(".").pop()?.toLowerCase();
@@ -118,17 +118,22 @@ const buildFileResponse = async (
     headers.set("Content-Type", mimeType);
   }
 
-  const lastModified = Number(file.lastModified ?? 0);
-  if (lastModified > 0) {
-    headers.set("Last-Modified", new Date(lastModified).toUTCString());
+  if (!isDevelopment) {
+    const lastModified = Number(file.lastModified ?? 0);
+    if (lastModified > 0) {
+      headers.set("Last-Modified", new Date(lastModified).toUTCString());
 
-    const ifModifiedSince = request.headers.get("if-modified-since");
-    if (ifModifiedSince) {
-      const since = Date.parse(ifModifiedSince);
-      if (!Number.isNaN(since) && lastModified <= since) {
-        return new Response(null, { status: 304, headers });
+      const ifModifiedSince = request.headers.get("if-modified-since");
+      if (ifModifiedSince) {
+        const since = Date.parse(ifModifiedSince);
+        if (!Number.isNaN(since) && lastModified <= since) {
+          return new Response(null, { status: 304, headers });
+        }
       }
     }
+  } else {
+    headers.set("Pragma", "no-cache");
+    headers.set("Expires", "0");
   }
 
   const isHtml =
